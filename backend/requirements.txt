@@ -1,0 +1,8 @@
+Flask==2.0.1
+Flask-HTTPAuth==4.5.0
+pyOpenSSL==22.0.0
+Werkzeug==2.0.3
+Jinja2==3.0.3
+python-dotenv==0.19.2
+psycopg2-binary==2.8.5
+peewee~=3.14.4
