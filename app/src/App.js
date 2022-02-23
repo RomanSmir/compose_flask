@@ -35,15 +35,12 @@ console.log(
 
     return (
         <QueryClientProvider client={queryClient}>
-        <div className="App">
-            <header className="App-header">Список Бастионов
-            </header>
-            <DocumentsList />
-            <p>The current time is {currentTime}.</p>
-
-
-        </div>
-    </QueryClientProvider>
+            <div className="App">
+                <header className="App-header">Список Бастионов
+                </header>
+                <DocumentsList/>
+            </div>
+        </QueryClientProvider>
     );
 }
 
