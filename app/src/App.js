@@ -12,12 +12,12 @@ function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-        <div className="App">
-            <header className="App-header">Список Бастионов
-            </header>
-            <DocumentsList />
-        </div>
-    </QueryClientProvider>
+            <div className="App">
+                <header className="App-header">Список Бастионов
+                </header>
+                <DocumentsList/>
+            </div>
+        </QueryClientProvider>
     );
 }
 
