@@ -18,11 +18,11 @@ def log_request_info():
 
 @app.route('/get_file')
 def get_file():
-    data = {"time": ['1','2','3','45']}
+    data = ['test 1', "test 12"]
     app.logger.info(data)
     app.logger.info(type(data))
 
-    return data
+    return json.dumps(data)
 
 
 if __name__ == "__main__":

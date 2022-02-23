@@ -10,7 +10,7 @@ const response = {
 
 function useDocumentsList() {
     return useQuery("documentsList", async () => {
-        const res = await axios.get("http://localhost:5000/get_file");
+        const res = await axios.get("http://0.0.0.0:5000/get_file");
 
         return res.statusText === 'OK' && res.data ? res.data : response.data;
     });
