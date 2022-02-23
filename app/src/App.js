@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {DocumentsList} from './components/DocumentsList'
+import axios from "axios";
+import {
+    QueryClient,
+    QueryClientProvider,
+} from "react-query";
 
+const queryClient = new QueryClient();
 
 function App() {
-const [clock, setClock] = useState(0)
 
-
-useEffect(() =>{
-    const id = setInterval(() => setClock(prev => prev + 1), 1000)
-    axios.get('').then.setState({toTa})
-
-
-  return () => clearInterval(id)
-}, [])
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      {clock}
-    </div>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+        <div className="App">
+            <header className="App-header">Список Бастионов
+            </header>
+            <DocumentsList />
+        </div>
+    </QueryClientProvider>
+    );
 }
 
 export default App;

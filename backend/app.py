@@ -1,13 +1,11 @@
-import datetime
-from json import dump
+import json
 from flask import Flask, request, render_template
-from werkzeug.utils import secure_filename
-import os
-from handler import postgres_handler
 from flask import request, Response
-
+from flask_cors import CORS
 app = Flask(__name__)
 app.config['DEBUG'] = True
+CORS(app)
+
 
 
 @app.before_request
@@ -18,9 +16,11 @@ def log_request_info():
     app.logger.info('Route: %s', rule)
 
 
-@app.route('/ping')
-def ping():
-    return json.dump({"test": 'pong'})
+@app.route('/get_file', methods=['GET'])
+def get_file():
+    data = json.dumps(['test 1', 'test 2'])
+    app.logger.info(data)
+    return data
 
 
 if __name__ == "__main__":

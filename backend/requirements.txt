@@ -6,3 +6,4 @@ Jinja2==3.0.3
 python-dotenv==0.19.2
 psycopg2-binary==2.8.5
 peewee~=3.14.4
+Flask-Cors==3.0.10
