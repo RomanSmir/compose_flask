@@ -16,10 +16,12 @@ def log_request_info():
     app.logger.info('Route: %s', rule)
 
 
-@app.route('/get_file', methods=['GET'])
+@app.route('/get_file')
 def get_file():
-    data = json.dumps(['test 1', 'test 2'])
+    data = {"time": ['1','2','3','45']}
     app.logger.info(data)
+    app.logger.info(type(data))
+
     return data
 
 
